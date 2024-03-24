@@ -1,0 +1,59 @@
+### Módulo 9: Gestión de Versiones Semánticas y Etiquetado en Git
+
+En este módulo, exploraremos cómo gestionar versiones semánticas y utilizar etiquetas en Git para marcar versiones específicas de tu proyecto.
+
+#### 9.1. Versionado Semántico
+
+El versionado semántico es un enfoque para asignar números de versión a las versiones del software de una manera clara y significativa.
+
+- **MAJOR.MINOR.PATCH**: Un número de versión consta de tres partes: MAJOR, MINOR y PATCH. Cada parte tiene un significado específico:
+  - MAJOR: Incrementado cuando se realizan cambios incompatibles en la API.
+  - MINOR: Incrementado cuando se añaden funcionalidades nuevas de forma compatible con versiones anteriores.
+  - PATCH: Incrementado cuando se realizan correcciones de errores compatibles con versiones anteriores.
+
+#### 9.2. Etiquetado en Git
+
+Las etiquetas en Git son referencias estáticas a puntos específicos en la historia del repositorio, generalmente utilizadas para marcar versiones de software.
+
+- **`git tag`**: Permite crear, listar y eliminar etiquetas en Git.
+
+```bash
+# Ejemplo de etiquetado de una versión en Git
+$ git tag -a v1.0.0 -m "Versión 1.0.0"
+```
+
+- **Etiquetas Anotadas**: Son etiquetas que almacenan más información, como el autor, la fecha y el mensaje.
+
+```bash
+# Ejemplo de creación de una etiqueta anotada en Git
+$ git tag -a v1.0.0 -m "Versión 1.0.0" <commit-hash>
+```
+
+- **Etiquetas Ligeras**: Son simples apuntadores a commits, sin información adicional.
+
+```bash
+# Ejemplo de creación de una etiqueta ligera en Git
+$ git tag v1.0.0
+```
+
+#### 9.3. Gestión de Versiones
+
+Utilizando etiquetas y versionado semántico, podemos gestionar eficazmente las versiones de nuestro proyecto en Git.
+
+- **Creación de Etiquetas para Versiones**: Etiquetar cada versión importante de tu proyecto utilizando versionado semántico.
+
+- **Análisis de Cambios entre Versiones**: Utilizar herramientas como `git log` y `git diff` para revisar los cambios entre versiones etiquetadas.
+
+```bash
+# Ejemplo de ver los cambios entre dos etiquetas en Git
+$ git diff v1.0.0 v2.0.0
+```
+
+- **Publicación de Versiones**: Publicar versiones etiquetadas en el repositorio remoto para que otros desarrolladores y usuarios puedan acceder a ellas.
+
+```bash
+# Ejemplo de envío de etiquetas al repositorio remoto
+$ git push origin v1.0.0
+```
+
+La gestión de versiones semánticas y el etiquetado en Git te permiten mantener un registro claro y ordenado de las versiones de tu proyecto, facilitando la colaboración y el seguimiento de cambios a lo largo del tiempo. Utilizando estas prácticas, podrás lanzar versiones estables y coherentes de tu software y comunicar claramente las actualizaciones a los usuarios y colaboradores.

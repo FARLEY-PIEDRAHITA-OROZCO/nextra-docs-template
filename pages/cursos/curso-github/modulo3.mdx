@@ -1,0 +1,43 @@
+### Módulo 3: Trabajo con Repositorios Remotos
+
+En este módulo, aprenderemos cómo trabajar con repositorios remotos en Git, lo que incluye clonar repositorios existentes, sincronizar cambios entre repositorios locales y remotos, y gestionar ramas en repositorios remotos.
+
+#### 3.1 Clonación de un repositorio remoto
+La clonación de un repositorio remoto implica la creación de una copia local de un repositorio alojado en un servidor remoto. Esto permite a los usuarios obtener una versión local del proyecto y trabajar en él. Aquí hay un ejemplo de cómo clonar un repositorio remoto:
+
+```bash
+# Clonar un repositorio remoto desde GitHub
+git clone https://github.com/usuario/repo.git
+```
+
+#### 3.2 Conexión de un repositorio local a GitHub
+Para conectar un repositorio local a un repositorio remoto en GitHub, primero necesitas obtener la URL del repositorio remoto en GitHub. Luego, puedes agregar esta URL como origen remoto en tu repositorio local. Aquí tienes un ejemplo:
+
+```bash
+# Agregar un repositorio remoto en GitHub como origen
+git remote add origin https://github.com/usuario/repo.git
+```
+
+#### 3.3 Sincronización de cambios entre repositorios local y remoto
+Es importante mantener sincronizados los cambios entre el repositorio local y el remoto para colaborar eficientemente en proyectos. Aquí hay un ejemplo de cómo enviar cambios locales al repositorio remoto y cómo obtener cambios del repositorio remoto:
+
+```bash
+# Enviar cambios locales al repositorio remoto
+git push origin master
+
+# Obtener cambios del repositorio remoto y fusionarlos con el repositorio local
+git pull origin master
+```
+
+#### 3.4 Ramas (branches) en GitHub
+GitHub permite trabajar con ramas de manera similar a Git localmente. Puedes crear, eliminar y fusionar ramas en GitHub a través de su interfaz web o utilizando comandos Git. Aquí tienes un ejemplo de cómo listar y crear ramas en GitHub:
+
+```bash
+# Listar ramas en el repositorio remoto en GitHub
+git branch -r
+
+# Crear una nueva rama en el repositorio remoto en GitHub
+git push origin nueva-rama
+```
+
+Con estos conceptos y ejemplos, estarás preparado para trabajar de manera efectiva con repositorios remotos en GitHub y colaborar en proyectos de desarrollo de software de manera distribuida.

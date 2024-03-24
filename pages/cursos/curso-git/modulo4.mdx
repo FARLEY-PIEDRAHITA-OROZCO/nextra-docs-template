@@ -1,0 +1,59 @@
+### Módulo 4: Trabajo con Ramas (Branches)
+
+En este módulo, nos adentraremos en el manejo de ramas en Git, lo cual es fundamental para desarrollar de manera efectiva y colaborativa en proyectos.
+
+#### 4.1. Creación y gestión de ramas
+
+Las ramas permiten trabajar en características o arreglos de errores de forma aislada, sin afectar la rama principal del proyecto. A continuación, aprenderemos cómo crear y gestionar ramas en Git.
+
+- **`git branch`**: Permite listar, crear y eliminar ramas en el repositorio.
+
+```bash
+# Ejemplo de listar todas las ramas en el repositorio
+$ git branch
+
+# Ejemplo de crear una nueva rama
+$ git branch nueva_rama
+
+# Ejemplo de eliminar una rama
+$ git branch -d rama_a_eliminar
+```
+
+- **`git checkout -b`**: Crea una nueva rama y cambia a ella en un solo paso.
+
+```bash
+# Ejemplo de crear una nueva rama y cambiar a ella
+$ git checkout -b nueva_rama
+```
+
+- **`git switch`**: Desde Git 2.23 en adelante, también puedes crear y cambiar a una nueva rama en un solo paso con el comando `git switch -c nombre_de_rama`.
+
+```bash
+# Ejemplo de crear y cambiar a una nueva rama con git switch
+$ git switch -c nueva_rama
+```
+
+#### 4.2. Fusión de ramas (Merge)
+
+La fusión de ramas es el proceso de combinar los cambios realizados en una rama con otra. Aprenderemos cómo fusionar ramas y resolver conflictos que puedan surgir.
+
+- **`git merge`**: Fusiona los cambios de una rama con la rama actual.
+
+```bash
+# Ejemplo de fusionar los cambios de una rama en la rama actual
+$ git merge otra_rama
+```
+
+- **Resolución de conflictos**: En caso de que haya conflictos durante la fusión, Git te indicará qué archivos tienen conflictos y te permitirá resolverlos manualmente.
+
+```bash
+# Ejemplo de resolver conflictos durante la fusión
+# Abre los archivos en conflicto en un editor de texto y resuelve los conflictos manualmente
+$ git status
+$ git diff archivo_en_conflicto
+# Después de resolver los conflictos, marca los archivos como resueltos y realiza un commit
+$ git add archivo_en_conflicto
+$ git commit -m "Resuelto conflicto en archivo_en_conflicto"
+```
+
+La gestión adecuada de ramas en Git es esencial para un desarrollo organizado y colaborativo en proyectos. Con este conocimiento, podrás experimentar con diferentes características y arreglos de errores sin interferir con el flujo principal de desarrollo. Además, comprender cómo fusionar ramas y resolver conflictos te permitirá integrar de manera efectiva el trabajo realizado en diferentes ramas en tu proyecto principal.

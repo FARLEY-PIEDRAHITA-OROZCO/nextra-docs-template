@@ -1,0 +1,82 @@
+### Módulo 5: Trabajo Remoto con Git
+
+En este módulo, exploraremos cómo trabajar con repositorios remotos en Git, lo cual es fundamental para colaborar con otros desarrolladores y mantener un flujo de trabajo consistente.
+
+#### 5.1. Configuración de repositorios remotos
+
+Antes de trabajar con repositorios remotos, necesitamos configurar las conexiones entre nuestro repositorio local y los repositorios remotos.
+
+- **`git remote`**: Permite listar, agregar y eliminar conexiones remotas.
+
+```bash
+# Ejemplo de listar conexiones remotas
+$ git remote -v
+
+# Ejemplo de agregar una nueva conexión remota
+$ git remote add origin <URL_del_repositorio_remoto>
+
+# Ejemplo de eliminar una conexión remota
+$ git remote remove origin
+```
+
+#### 5.2. Trabajo con repositorios remotos
+
+Una vez configurados los repositorios remotos, podemos comenzar a colaborar y compartir nuestro trabajo con otros desarrolladores.
+
+- **`git fetch`**: Descarga los cambios desde el repositorio remoto al repositorio local, pero no los fusiona automáticamente.
+
+```bash
+# Ejemplo de descargar cambios desde el repositorio remoto
+$ git fetch origin
+```
+
+- **`git pull`**: Descarga los cambios desde el repositorio remoto y los fusiona automáticamente con la rama actual en el repositorio local.
+
+```bash
+# Ejemplo de descargar y fusionar cambios desde el repositorio remoto
+$ git pull origin master
+```
+
+- **`git push`**: Envía los cambios locales al repositorio remoto.
+
+```bash
+# Ejemplo de enviar cambios locales al repositorio remoto
+$ git push origin master
+```
+
+#### 5.3. Ramas remotas
+
+Git también nos permite trabajar con ramas en repositorios remotos.
+
+- **`git branch -r`**: Lista todas las ramas remotas.
+
+```bash
+# Ejemplo de listar todas las ramas remotas
+$ git branch -r
+```
+
+- **`git checkout -b <nombre_rama_local> origin/<nombre_rama_remota>`**: Crea una nueva rama local basada en una rama remota.
+
+```bash
+# Ejemplo de crear una nueva rama local basada en una rama remota
+$ git checkout -b nueva_rama origin/nueva_rama
+```
+
+- **`git push origin <nombre_rama_local>`**: Envía una nueva rama local al repositorio remoto.
+
+```bash
+# Ejemplo de enviar una nueva rama local al repositorio remoto
+$ git push origin nueva_rama
+```
+
+#### 5.4. Colaboración con repositorios remotos
+
+Git facilita la colaboración con otros desarrolladores a través de repositorios remotos.
+
+- **Solicitudes de extracción (Pull Requests)**: En plataformas como GitHub o GitLab, los colaboradores pueden enviar solicitudes de extracción para proponer cambios en el repositorio principal.
+
+- **Revisión de código**: Los equipos pueden revisar los cambios propuestos antes de fusionarlos en la rama principal del proyecto.
+
+- **Resolución de conflictos**: En caso de conflictos durante la fusión de cambios, se pueden resolver de manera colaborativa con la participación de los desarrolladores involucrados.
+
+El trabajo remoto con Git es esencial para colaborar efectivamente en proyectos de desarrollo de software. Con este conocimiento, podrás compartir tu trabajo con otros desarrolladores, mantener un historial de cambios completo y colaborar de manera eficiente en el desarrollo de proyectos.

@@ -1,0 +1,60 @@
+### Módulo 7: Gestión Avanzada de Ramas y Resolución de Conflictos en Git
+
+En este módulo, profundizaremos en la gestión avanzada de ramas en Git y aprenderemos a resolver conflictos que puedan surgir durante el proceso de fusión.
+
+#### 7.1. Estrategias de fusión
+
+Cuando fusionamos ramas en Git, existen diferentes estrategias que podemos utilizar dependiendo de nuestras necesidades y del flujo de trabajo del proyecto.
+
+- **Fusión normal (Fast-forward)**: Git realizará una fusión simple si la rama que estamos fusionando no ha divergido desde el punto en que se separó de la rama actual.
+
+  ```bash
+  # Ejemplo de fusión normal
+  $ git checkout master
+  $ git merge feature-branch
+  ```
+
+- **Fusión recursiva (Recursive merge)**: Utilizada cuando las ramas que estamos fusionando tienen cambios conflictivos que deben ser resueltos.
+
+  ```bash
+  # Ejemplo de fusión recursiva
+  $ git checkout master
+  $ git merge --recursive feature-branch
+  ```
+
+#### 7.2. Resolución de conflictos
+
+Los conflictos pueden ocurrir cuando Git no puede fusionar automáticamente los cambios de dos ramas debido a modificaciones conflictivas en el mismo archivo. Aprenderemos cómo resolver estos conflictos manualmente.
+
+- **Identificación de conflictos**: Git indicará qué archivos tienen conflictos y mostrará los conflictos en el archivo marcando las secciones conflictivas.
+
+- **Resolución manual de conflictos**: Abrimos los archivos conflictivos en un editor de texto y resolvemos manualmente las diferencias entre las versiones. Luego, eliminamos las marcas de conflicto y guardamos los cambios.
+
+  ```bash
+  # Ejemplo de resolución manual de conflictos
+  # Editamos el archivo conflicto.txt para resolver los conflictos
+  $ git add conflicto.txt
+  $ git commit -m "Resuelto conflicto en conflicto.txt"
+  ```
+
+- **Fusión de la rama resuelta**: Después de resolver los conflictos, finalizamos la fusión completando el proceso de fusión.
+
+  ```bash
+  # Ejemplo de completar la fusión después de resolver conflictos
+  $ git merge --continue
+  ```
+
+#### 7.3. Herramientas de resolución de conflictos
+
+Además de la resolución manual de conflictos, existen herramientas visuales que pueden ayudar en este proceso.
+
+- **Git Mergetool**: Una herramienta integrada en Git que te permite resolver conflictos utilizando una herramienta visual.
+
+  ```bash
+  # Ejemplo de abrir Git Mergetool para resolver conflictos
+  $ git mergetool
+  ```
+
+- **Herramientas de terceros**: También hay varias herramientas de terceros disponibles que ofrecen funcionalidades avanzadas para la resolución de conflictos, como Sourcetree, Beyond Compare, y KDiff3.
+
+La gestión avanzada de ramas y la resolución de conflictos son habilidades importantes para cualquier desarrollador que trabaje con Git. Con este conocimiento, podrás manejar eficazmente situaciones complejas y colaborar de manera efectiva en proyectos de desarrollo de software.

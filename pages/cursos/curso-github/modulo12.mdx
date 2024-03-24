@@ -1,0 +1,43 @@
+### Módulo 12: Seguridad y Auditoría en GitHub
+
+En este módulo, exploraremos cómo garantizar la seguridad y realizar auditorías efectivas en GitHub, lo que incluye la configuración de políticas de seguridad del repositorio, el escaneo de vulnerabilidades y dependencias con Dependabot, el uso de GitHub Security Advisories y la auditoría de acceso y actividad del repositorio.
+
+#### 12.1 Configuración de políticas de seguridad del repositorio
+
+Supongamos que tenemos un repositorio de código abierto en GitHub que necesita una configuración de seguridad adecuada. A continuación, se muestra un ejemplo de cómo configurar algunas políticas de seguridad:
+
+- **Restricciones de acceso**: Limitamos el acceso al repositorio solo a colaboradores autorizados y al equipo principal del proyecto. Esto se puede configurar en la pestaña "Settings" del repositorio, en la sección "Manage access".
+
+- **Revisión de código obligatoria**: Configuramos una regla que requiere que todos los pull requests sean revisados por al menos dos colaboradores antes de la fusión. Esto se puede hacer habilitando la opción "Require pull request reviews before merging" en la sección "Branches" de la configuración del repositorio.
+
+- **Firmas de commits**: Activamos la opción de "Require signed commits" para garantizar que todos los commits estén firmados digitalmente. Esto se puede configurar en la sección "Branches" de la configuración del repositorio.
+
+#### 12.2 Escaneo de vulnerabilidades y dependencias con Dependabot
+
+Supongamos que tenemos Dependabot configurado en nuestro repositorio para escanear y gestionar las vulnerabilidades de las dependencias. Aquí hay un ejemplo de cómo funciona:
+
+- Dependabot detecta una vulnerabilidad en una dependencia y crea automáticamente una solicitud de extracción que actualiza la dependencia a una versión segura.
+
+- Los revisores del equipo revisan la solicitud de extracción y la aprueban si están satisfechos con los cambios propuestos.
+
+- Una vez que la solicitud de extracción se fusiona en la rama principal, Dependabot cierra automáticamente la vulnerabilidad en el panel de seguridad del repositorio.
+
+#### 12.3 Uso de GitHub Security Advisories
+
+Supongamos que descubrimos una vulnerabilidad en nuestro proyecto y queremos informar a los usuarios afectados de manera responsable. Aquí está cómo podemos utilizar GitHub Security Advisories:
+
+- Creamos un aviso de seguridad en nuestro repositorio para informar a los usuarios afectados sobre la vulnerabilidad y proporcionar orientación sobre cómo mitigar el problema.
+
+- Proporcionamos detalles sobre la vulnerabilidad, incluyendo una descripción del problema, las versiones afectadas y las posibles soluciones.
+
+- Los usuarios afectados pueden leer el aviso de seguridad en el panel de seguridad del repositorio y seguir las instrucciones para protegerse.
+
+#### 12.4 Auditoría de acceso y actividad del repositorio
+
+Supongamos que queremos auditar el acceso y la actividad en nuestro repositorio para mantener la seguridad y la integridad de nuestros datos. Aquí hay un ejemplo de cómo hacerlo:
+
+- Revisamos el registro de auditoría del repositorio para ver quién ha accedido al repositorio, qué acciones han realizado y cuándo se realizaron.
+
+- Encuentramos un registro de acceso sospechoso y tomamos medidas para reforzar la seguridad del repositorio, como revocar permisos de acceso o restablecer contraseñas.
+
+Con estos ejemplos prácticos, podrás aplicar prácticas de seguridad efectivas y realizar auditorías adecuadas en tu proyecto de GitHub.

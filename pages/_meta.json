@@ -1,15 +1,14 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
+  "index": {
+    "title": "Inicio",
     "type": "page"
   },
-  "contact": {
-    "title": "Contact ↗",
-    "type": "page",
-    "href": "https://twitter.com/shuding_",
-    "newWindow": true
+  "cursos": {
+    "title": "Cursos",
+    "type": "page"
+  },
+  "about": {
+    "title": "Acerca",
+    "type": "page"
   }
 }

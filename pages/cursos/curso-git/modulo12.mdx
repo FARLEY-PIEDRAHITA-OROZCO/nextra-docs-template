@@ -1,0 +1,114 @@
+### Módulo 12: Casos de Uso Específicos
+
+En este módulo, exploraremos diversos casos de uso específicos donde Git juega un papel crucial en el desarrollo de software.
+
+#### 12.1. Integración con Herramientas de CI/CD
+
+- **Jenkins**: Analizaremos cómo integrar Git con Jenkins para automatizar la integración continua y la entrega continua (CI/CD) en proyectos de software.
+
+    **Ejemplo**: Configuración de un pipeline en Jenkins que escuche cambios en un repositorio Git y automatice pruebas y despliegues. Por ejemplo:
+    ```groovy
+    pipeline {
+        agent any
+        stages {
+            stage('Build') {
+                steps {
+                    git 'https://github.com/usuario/proyecto.git'
+                    sh 'make'
+                }
+            }
+            stage('Test') {
+                steps {
+                    sh 'make test'
+                }
+            }
+            stage('Deploy') {
+                steps {
+                    sh 'make deploy'
+                }
+            }
+        }
+    }
+    ```
+
+- **GitLab CI/CD**: Exploraremos las capacidades integradas de CI/CD en GitLab y cómo utilizarlas en proyectos alojados en GitLab.
+
+    **Ejemplo**: Configuración de un archivo `.gitlab-ci.yml` para definir un pipeline de CI/CD en GitLab. Por ejemplo:
+    ```yaml
+    stages:
+      - build
+      - test
+      - deploy
+
+    build_job:
+      stage: build
+      script:
+        - make
+
+    test_job:
+      stage: test
+      script:
+        - make test
+
+    deploy_job:
+      stage: deploy
+      script:
+        - make deploy
+      when: manual
+    ```
+
+- **GitHub Actions**: Discutiremos cómo utilizar GitHub Actions para automatizar flujos de trabajo específicos en repositorios alojados en GitHub.
+
+    **Ejemplo**: Creación de un flujo de trabajo en GitHub Actions que realice pruebas y despliegues automáticamente después de cada push. Por ejemplo:
+    ```yaml
+    name: CI/CD
+
+    on:
+      push:
+        branches:
+          - main
+
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v2
+
+          - name: Build
+            run: make
+
+          - name: Test
+            run: make test
+
+          - name: Deploy
+            run: make deploy
+            env:
+              SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+    ```
+
+#### 12.2. Uso de Git en Diferentes Contextos
+
+- **Desarrollo Web**: Exploraremos cómo Git se utiliza en proyectos de desarrollo web para gestionar versiones de código, colaborar en equipos y desplegar cambios en servidores de producción.
+
+    **Ejemplo**: Utilización de ramas de feature para el desarrollo de nuevas funcionalidades en una aplicación web. Por ejemplo:
+    ```bash
+    git checkout -b feature-nueva-funcionalidad
+    ```
+
+- **Desarrollo Móvil**: Analizaremos cómo Git se adapta al desarrollo de aplicaciones móviles, incluidos los flujos de trabajo para gestionar cambios en el código fuente y recursos específicos de la plataforma.
+
+    **Ejemplo**: Utilización de Git para colaborar en el desarrollo de una aplicación móvil Android o iOS, incluida la gestión de archivos de recursos. Por ejemplo:
+    ```bash
+    git checkout -b feature-nueva-pantalla-login
+    ```
+
+- **Desarrollo de Juegos**: Discutiremos el uso de Git en proyectos de desarrollo de videojuegos, incluidos los flujos de trabajo para gestionar activos multimedia, scripts y código fuente del juego.
+
+    **Ejemplo**: Configuración de ramas específicas para desarrollar nuevas características o corregir errores en un juego en desarrollo. Por ejemplo:
+    ```bash
+    git checkout -b feature-nuevo-nivel
+    ```
+
+Este módulo proporcionará una visión detallada de cómo Git se aplica en diferentes escenarios y contextos de desarrollo de software, desde la integración con herramientas de CI/CD hasta su uso en proyectos específicos como desarrollo web, móvil y de juegos.

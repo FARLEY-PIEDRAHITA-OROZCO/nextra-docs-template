@@ -1,0 +1,49 @@
+### Módulo 4: Colaboración en GitHub
+
+En este módulo, exploraremos cómo colaborar de manera efectiva en GitHub, utilizando diversas herramientas y prácticas para gestionar el trabajo en equipo en proyectos de desarrollo de software.
+
+#### 4.1 Creación y gestión de issues
+Los issues son utilizados para realizar un seguimiento de tareas, errores y otras solicitudes en un proyecto. Pueden ser creados por cualquier persona con acceso al repositorio y son una forma común de colaboración en GitHub. Aquí hay un ejemplo de cómo crear un issue:
+
+```markdown
+# Crear un nuevo issue utilizando Markdown
+## Título del Issue
+Descripción detallada del issue y los pasos para reproducirlo, si es aplicable.
+```
+
+#### 4.2 Trabajo con pull requests
+Los pull requests son utilizados para solicitar cambios en un repositorio. Permiten a los colaboradores notificar a otros sobre los cambios que han realizado y solicitar comentarios y revisiones. Aquí hay un ejemplo de cómo crear un pull request:
+
+```bash
+# Crear un nuevo branch para trabajar en una nueva característica o solucionar un issue
+git checkout -b nueva-caracteristica
+
+# Realizar cambios en el código y confirmarlos
+git add .
+git commit -m "Implementar nueva característica"
+
+# Subir el branch a GitHub
+git push origin nueva-caracteristica
+```
+
+#### 4.3 Revisión de código (code review)
+La revisión de código es un proceso en el que los colaboradores examinan el código creado por otros colaboradores para identificar errores, mejorar la calidad del código y asegurar que cumple con los estándares establecidos. Aquí hay un ejemplo de cómo revisar un pull request:
+
+```markdown
+# Comentar en un pull request para realizar una revisión de código
+- [ ] El código parece estar bien, pero deberíamos considerar refactorizar esta función para mejorar su legibilidad.
+- [ ] ¿Se han probado adecuadamente los casos de borde?
+```
+
+#### 4.4 Uso de etiquetas (tags) y versionado
+Las etiquetas son utilizadas para marcar commits específicos en un repositorio. Se suelen utilizar para marcar versiones de software, facilitando la referencia a versiones específicas del código. Aquí hay un ejemplo de cómo crear y aplicar etiquetas en un repositorio:
+
+```bash
+# Crear una etiqueta para una versión específica
+git tag -a v1.0 -m "Versión 1.0"
+
+# Empujar la etiqueta al repositorio remoto
+git push origin v1.0
+```
+
+Con estos conceptos y ejemplos, podrás colaborar de manera efectiva en proyectos de GitHub y aprovechar al máximo las herramientas disponibles para gestionar el trabajo en equipo.

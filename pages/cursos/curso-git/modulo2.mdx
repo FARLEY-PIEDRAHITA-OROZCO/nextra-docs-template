@@ -1,0 +1,41 @@
+### Módulo 2: Instalación y Configuración
+
+#### 2.1. Instalación de Git
+
+Antes de comenzar a trabajar con Git, necesitas instalarlo en tu sistema. Git es compatible con una variedad de sistemas operativos, incluyendo Windows, macOS y Linux.
+
+- **Instalación en Windows**:
+  - Descarga el instalador de Git desde el sitio web oficial.
+  - Ejecuta el archivo descargado y sigue las instrucciones del instalador.
+  - Después de la instalación, verifica que Git se haya instalado correctamente abriendo una terminal y ejecutando el comando `git --version`.
+
+- **Instalación en macOS**:
+  - Git generalmente viene preinstalado en macOS. Puedes verificar su instalación ejecutando `git --version` en la terminal.
+  - Si prefieres instalar Git a través de Homebrew, puedes hacerlo ejecutando `brew install git` en la terminal.
+
+- **Instalación en Linux**:
+  - Usa el administrador de paquetes de tu distribución para instalar Git. Por ejemplo, en Ubuntu puedes ejecutar `sudo apt-get install git`.
+  - Una vez instalado, verifica la instalación con `git --version`.
+
+#### 2.2. Configuración inicial de Git
+
+Después de instalar Git, es importante configurarlo correctamente antes de comenzar a trabajar con repositorios.
+
+- **Configuración global**:
+  - Especifica tu nombre de usuario y dirección de correo electrónico que se asociarán con tus commits en todos los repositorios. Esto se puede hacer ejecutando los siguientes comandos:
+    ```
+    git config --global user.name "Tu Nombre"
+    git config --global user.email "tu@email.com"
+    ```
+  - También puedes configurar otros aspectos globales, como el editor de texto predeterminado (`git config --global core.editor`) y la configuración de color (`git config --global color.ui`).
+
+- **Configuración local**:
+  - Si deseas configurar opciones específicas para un repositorio en particular, puedes omitir la opción `--global` al ejecutar los comandos de configuración.
+
+- **Verificación de configuración**:
+  - Para verificar la configuración actual de Git, puedes ejecutar `git config --list`.
+
+- **Opciones adicionales de configuración**:
+  - Git ofrece una variedad de opciones de configuración que puedes explorar para personalizar tu entorno de trabajo, como alias de comandos (`git config --global alias.<alias> <comando>`), ignorar archivos específicos (`git config --global core.excludesfile`), etc.
+
+En este módulo, has aprendido cómo instalar Git en tu sistema operativo y cómo configurar correctamente tu identidad y otras opciones de configuración. Configurar Git de manera adecuada es esencial para un flujo de trabajo eficiente y para garantizar que tus contribuciones sean adecuadamente identificadas en los repositorios.

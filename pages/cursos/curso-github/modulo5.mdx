@@ -1,0 +1,70 @@
+### Módulo 5: Herramientas Avanzadas de GitHub
+
+En este módulo, exploraremos herramientas avanzadas proporcionadas por GitHub para mejorar el flujo de trabajo de desarrollo de software y la automatización de tareas.
+
+#### 5.1 Uso de GitHub Pages para hosting de sitios estáticos
+GitHub Pages es un servicio que permite alojar sitios web estáticos directamente desde un repositorio de GitHub. Esto es útil para proyectos de documentación, blogs personales y páginas de proyectos. Aquí hay un ejemplo de cómo configurar GitHub Pages:
+
+```markdown
+# Activar GitHub Pages en la configuración del repositorio
+- Ir a la configuración del repositorio en GitHub
+- Desplazarse hacia abajo hasta la sección "GitHub Pages"
+- Seleccionar la rama y la carpeta de origen para el sitio web
+- Guardar los cambios
+
+# Acceder al sitio web alojado en GitHub Pages
+https://usuario.github.io/mi-proyecto
+```
+
+#### 5.2 Integración de GitHub con servicios de CI/CD (Travis CI, CircleCI)
+La integración continua (CI) y la implementación continua (CD) son prácticas comunes en el desarrollo de software para automatizar pruebas y despliegues. GitHub se integra con varias herramientas de CI/CD, como Travis CI y CircleCI. Aquí hay un ejemplo de cómo configurar Travis CI para una integración continua:
+
+```yaml
+# Ejemplo de configuración de Travis CI en un archivo .travis.yml
+language: node_js
+node_js:
+  - "14"
+script:
+  - npm install
+  - npm test
+```
+
+#### 5.3 Uso de GitHub Actions para automatización de flujos de trabajo
+GitHub Actions es una característica que permite automatizar flujos de trabajo dentro de GitHub. Puedes utilizar acciones predefinidas o crear las tuyas propias para realizar tareas específicas. Aquí hay un ejemplo de un flujo de trabajo de GitHub Actions para probar y construir un proyecto:
+
+```yaml
+# Ejemplo de flujo de trabajo de GitHub Actions en un archivo .github/workflows/main.yml
+name: Pruebas y Construcción
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del repositorio
+      uses: actions/checkout@v2
+
+    - name: Instalar dependencias
+      run: npm install
+
+    - name: Ejecutar pruebas
+      run: npm test
+
+    - name: Construir aplicación
+      run: npm build
+```
+
+#### 5.4 Gestión de dependencias con GitHub Packages
+GitHub Packages es un servicio de gestión de paquetes que te permite alojar y compartir paquetes de código. Puedes utilizarlo para gestionar dependencias en tus proyectos y acceder a paquetes privados. Aquí hay un ejemplo de cómo instalar un paquete desde GitHub Packages:
+
+```bash
+# Instalar un paquete desde GitHub Packages utilizando npm
+npm install @usuario/paquete
+```
+
+Con estas herramientas avanzadas de GitHub y los ejemplos proporcionados, podrás mejorar significativamente tu flujo de trabajo de desarrollo de software y automatizar tareas clave en tus proyectos.

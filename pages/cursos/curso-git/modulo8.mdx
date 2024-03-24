@@ -1,0 +1,64 @@
+### Módulo 8: Rebase y Otras Herramientas Avanzadas en Git
+
+En este módulo, exploraremos técnicas avanzadas en Git, como el rebase, la búsqueda de errores y otras herramientas que pueden mejorar tu flujo de trabajo y la eficiencia en el manejo de repositorios.
+
+#### 8.1. Rebase
+
+El rebase es una técnica que nos permite reescribir el historial de commits para aplicar los cambios de una rama sobre otra de una manera más limpia y lineal.
+
+- **`git rebase`**: Aplica los commits de una rama sobre otra.
+
+```bash
+# Ejemplo de rebase de una rama sobre master
+$ git checkout feature-branch
+$ git rebase master
+```
+
+- **Interactividad**: El rebase interactivo te permite revisar y editar los commits durante el proceso de rebase.
+
+```bash
+# Ejemplo de rebase interactivo para fusionar commits y reordenarlos
+$ git rebase -i master
+```
+
+#### 8.2. Búsqueda de Errores
+
+Git ofrece herramientas para ayudarte a encontrar errores en tu código y en el historial de commits.
+
+- **`git bisect`**: Utiliza una búsqueda binaria para encontrar el commit que introdujo un bug.
+
+```bash
+# Ejemplo de uso de git bisect para encontrar un commit que introdujo un bug
+$ git bisect start
+$ git bisect bad       # Marcar el commit actual como defectuoso
+$ git bisect good v1.0 # Marcar un commit conocido como bueno
+$ git bisect run prueba.sh # Ejecutar una prueba automatizada para determinar si el commit es defectuoso
+```
+
+#### 8.3. Otras Herramientas
+
+Además del rebase y la búsqueda de errores, Git ofrece otras herramientas avanzadas que pueden mejorar tu flujo de trabajo.
+
+- **`git cherry-pick`**: Permite aplicar un commit específico de una rama a otra.
+
+```bash
+# Ejemplo de cherry-pick de un commit específico
+$ git cherry-pick <commit-hash>
+```
+
+- **`git reflog`**: Registra todos los cambios en la referencia de HEAD, lo que te permite recuperar cambios perdidos o eliminados accidentalmente.
+
+```bash
+# Ejemplo de uso de git reflog para recuperar un commit eliminado
+$ git reflog
+$ git checkout HEAD@{1}  # Revertir al commit anterior
+```
+
+- **`git submodule`**: Permite incluir otros repositorios Git dentro de tu repositorio principal como submódulos.
+
+```bash
+# Ejemplo de añadir un submódulo a tu proyecto
+$ git submodule add <URL_del_submodulo>
+```
+
+Estas herramientas avanzadas en Git te permitirán mejorar tu flujo de trabajo, resolver problemas con mayor eficiencia y mantener un historial de commits limpio y organizado. Con práctica y experiencia, podrás aprovechar al máximo estas herramientas en tus proyectos de desarrollo de software.

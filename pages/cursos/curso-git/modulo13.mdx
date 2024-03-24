@@ -1,0 +1,85 @@
+### Módulo 13: Mantenimiento y Optimización de Repositorios Git
+
+En este módulo, nos adentraremos en técnicas avanzadas de mantenimiento y optimización de repositorios Git para garantizar su integridad, rendimiento y eficiencia.
+
+#### 13.1. Limpieza de Repositorios
+
+- **`git gc` (Garbage Collection)**: Explicaremos en detalle cómo funciona el comando `git gc` para eliminar objetos no referenciados y optimizar el almacenamiento de objetos en el repositorio.
+
+    ```bash
+    git gc
+    ```
+
+- **`git prune`**: Abordaremos el uso de `git prune` para eliminar objetos no referenciados de forma más específica y mantener limpio el historial del repositorio.
+
+    ```bash
+    git prune
+    ```
+
+- **Limpieza Regular**: Discutiremos la importancia de realizar limpiezas regulares en repositorios Git para evitar la acumulación de objetos innecesarios y mantener un rendimiento óptimo.
+
+#### 13.2. Optimización del Rendimiento
+
+- **Estrategias para Repositorios Grandes**: Presentaremos estrategias específicas para optimizar el rendimiento de repositorios Git grandes, como la división en submódulos o la utilización de Git LFS.
+
+    ```bash
+    git submodule add <URL>
+    ```
+
+- **Mejoras de Velocidad**: Exploraremos técnicas para mejorar la velocidad de operaciones comunes en Git, como la clonación, la extracción y la fusión, mediante el ajuste de configuraciones y el uso de herramientas específicas.
+
+    ```bash
+    git config --global core.preloadindex true
+    ```
+
+#### 13.3. Buenas Prácticas de Mantenimiento
+
+- **Automatización de Tareas**: Hablaremos sobre la importancia de la automatización de tareas de mantenimiento en Git mediante el uso de scripts y herramientas de terceros.
+
+    ```bash
+    # Script de limpieza automática
+    #!/bin/bash
+    git gc
+    git prune
+    ```
+
+- **Programación de Tareas de Mantenimiento**: Discutiremos cómo programar tareas de mantenimiento regulares, como limpiezas y optimizaciones, para garantizar la salud a largo plazo de los repositorios Git.
+
+    ```bash
+    # Cronjob para ejecutar el script de limpieza todos los domingos a medianoche
+    0 0 * * 0 /ruta/al/script/limpieza.sh
+    ```
+
+- **Seguimiento del Rendimiento**: Presentaremos la necesidad de realizar un seguimiento continuo del rendimiento de los repositorios Git y de ajustar las estrategias de mantenimiento según sea necesario.
+
+#### Ejemplo Práctico:
+
+Supongamos que tenemos un repositorio Git grande con una historia extensa y que hemos notado un rendimiento degradado en operaciones como la clonación y la extracción. Podemos seguir los siguientes pasos para optimizar el rendimiento:
+
+1. Ejecutar `git gc` para realizar una recolección de basura y optimizar el almacenamiento de objetos en el repositorio.
+
+    ```bash
+    git gc
+    ```
+
+2. Utilizar `git prune` para eliminar objetos no referenciados de manera más específica y limpiar el historial del repositorio.
+
+    ```bash
+    git prune
+    ```
+
+3. Dividir el repositorio en submódulos para reducir la carga de datos durante operaciones como la clonación.
+
+    ```bash
+    git submodule add <URL>
+    ```
+
+4. Considerar el uso de Git LFS para manejar archivos grandes y binarios de manera más eficiente.
+
+    ```bash
+    git lfs track "*.mp4"
+    ```
+
+Al aplicar estas técnicas de optimización, podemos mejorar significativamente el rendimiento del repositorio y garantizar una experiencia fluida para los desarrolladores que trabajan en él.
+
+Este módulo proporcionará una comprensión detallada de cómo mantener y optimizar eficazmente los repositorios Git, asegurando un rendimiento óptimo y una experiencia de desarrollo fluida para todos los colaboradores del proyecto.

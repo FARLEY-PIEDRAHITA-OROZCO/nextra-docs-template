@@ -1,0 +1,89 @@
+### Módulo 3: Uso básico de Git
+
+En este módulo, exploraremos los conceptos fundamentales de Git y aprenderemos cómo realizar las operaciones básicas para gestionar un repositorio local.
+
+#### 3.1. Creación de un repositorio local
+
+Para comenzar a utilizar Git en un proyecto, necesitamos inicializar un repositorio local.
+
+- **`git init`**: Este comando inicializa un nuevo repositorio Git en el directorio actual. Después de ejecutar este comando, Git comenzará a rastrear los cambios en todos los archivos dentro de ese directorio.
+
+```bash
+# Ejemplo de inicialización de un nuevo repositorio Git
+$ git init
+Initialized empty Git repository in /ruta/a/tu/proyecto/.git/
+```
+
+- **`git clone`**: Si quieres comenzar a trabajar en un proyecto existente, puedes clonar un repositorio remoto en tu máquina local utilizando este comando.
+
+```bash
+# Ejemplo de clonación de un repositorio remoto
+$ git clone https://github.com/usuario/proyecto.git
+```
+
+#### 3.2. Ciclo básico de trabajo
+
+Una vez que tienes un repositorio Git configurado, puedes comenzar a realizar cambios en tus archivos y gestionarlos con Git.
+
+- **`git add`**: Antes de realizar un commit, necesitas agregar los cambios que deseas incluir en el próximo commit al área de preparación.
+
+```bash
+# Ejemplo de agregar archivos al área de preparación
+$ git add archivo.txt
+```
+
+- **`git commit`**: Después de agregar los cambios al área de preparación, puedes crear un nuevo commit que registre esos cambios en el historial del repositorio.
+
+```bash
+# Ejemplo de realizar un commit con un mensaje descriptivo
+$ git commit -m "Agregado archivo.txt con contenido inicial"
+```
+
+- **`git status`**: Este comando muestra el estado actual del repositorio.
+
+```bash
+# Ejemplo de ver el estado actual del repositorio
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <archivo>..." to update what will be committed)
+  (use "git checkout -- <archivo>..." to discard changes in working directory)
+
+    modified:   archivo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+- **`git diff`**: Te permite ver las diferencias entre los archivos modificados y su estado anterior.
+
+```bash
+# Ejemplo de ver las diferencias en un archivo modificado
+$ git diff archivo.txt
+```
+
+#### 3.3. Historial y navegación
+
+Git almacena un historial completo de todos los commits realizados en un repositorio, lo que te permite navegar por el historial y revisar los cambios en cualquier punto dado.
+
+- **`git log`**: Muestra el historial de commits.
+
+```bash
+# Ejemplo de ver el historial de commits
+$ git log
+commit c0b3e37e4f60e7ffbd1d2b6bf96d08d049c1b3f2 (HEAD -> master)
+Author: Tu Nombre <tu@email.com>
+Date:   Tue Mar 15 14:36:01 2024 +0200
+
+    Agregado archivo.txt con contenido inicial
+```
+
+- **`git checkout`**: Te permite moverte entre diferentes commits, ramas o etiquetas en el historial del repositorio.
+
+```bash
+# Ejemplo de cambiar a una rama específica
+$ git checkout nombre_de_rama
+```
+
+En este módulo, hemos explorado cómo iniciar un repositorio Git, realizar cambios, prepararlos para un commit y revisar el historial de commits. Estos son los pasos básicos que te permitirán comenzar a utilizar Git de manera efectiva para gestionar tu código fuente.

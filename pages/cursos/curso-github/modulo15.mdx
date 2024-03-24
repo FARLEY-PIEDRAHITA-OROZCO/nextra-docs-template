@@ -1,0 +1,66 @@
+### Módulo 15: Extensibilidad de GitHub: Integración con APIs
+
+En este módulo, exploraremos cómo aprovechar la extensibilidad de GitHub mediante la integración con su API. Esto incluye una introducción a la API de GitHub, cómo automatizar tareas a través de la API, el desarrollo de aplicaciones externas que interactúan con GitHub y ejemplos de integraciones con servicios externos.
+
+#### 15.1 Introducción a la API de GitHub
+
+La API de GitHub es una interfaz de programación de aplicaciones que permite interactuar con los datos y la funcionalidad de GitHub de forma programática. Algunas de las funcionalidades disponibles a través de la API incluyen la gestión de repositorios, la creación de issues, la administración de colaboradores y mucho más. Aquí hay un ejemplo de cómo utilizar la API de GitHub para obtener información sobre un repositorio:
+
+```python
+import requests
+
+# URL de la API de GitHub
+url = 'https://api.github.com/repos/{owner}/{repo}'
+
+# Realizar solicitud GET a la API
+response = requests.get(url)
+
+# Imprimir información del repositorio
+if response.status_code == 200:
+    repository_info = response.json()
+    print("Información del Repositorio:")
+    print("Nombre:", repository_info['name'])
+    print("Descripción:", repository_info['description'])
+    print("URL:", repository_info['html_url'])
+else:
+    print("Error al obtener información del repositorio:", response.status_code)
+```
+
+#### 15.2 Automatización de tareas a través de la API
+
+Una de las ventajas clave de la API de GitHub es la capacidad de automatizar tareas repetitivas o complejas. Por ejemplo, puedes utilizar la API para crear un script que cierre automáticamente los issues marcados como resueltos. Aquí hay un ejemplo de cómo hacerlo utilizando la biblioteca `requests` de Python:
+
+```python
+import requests
+
+# URL de la API de GitHub para cerrar un issue
+url = 'https://api.github.com/repos/{owner}/{repo}/issues/{issue_number}'
+
+# Parámetros de la solicitud PATCH para cerrar el issue
+payload = {'state': 'closed'}
+
+# Realizar solicitud PATCH a la API para cerrar el issue
+response = requests.patch(url, json=payload)
+
+# Verificar si el issue se cerró correctamente
+if response.status_code == 200:
+    print("El issue se cerró correctamente.")
+else:
+    print("Error al cerrar el issue:", response.status_code)
+```
+
+#### 15.3 Desarrollo de aplicaciones externas que interactúan con GitHub
+
+La API de GitHub también permite el desarrollo de aplicaciones externas que pueden interactuar con los datos y la funcionalidad de GitHub. Estas aplicaciones pueden ser herramientas de productividad, integraciones con otros servicios, o complementos personalizados para mejorar la experiencia de desarrollo en GitHub. Por ejemplo, puedes desarrollar una aplicación que integre GitHub con un sistema de gestión de proyectos externo, como Trello o Jira.
+
+#### 15.4 Ejemplos de integraciones con servicios externos
+
+GitHub se integra con una amplia variedad de servicios externos a través de su API, lo que te permite conectar tu flujo de trabajo de desarrollo con otras herramientas y servicios que ya utilizas. Algunos ejemplos comunes de integraciones externas incluyen:
+
+- Integración con sistemas de gestión de proyectos, como Trello, Jira o Asana, para sincronizar tareas y problemas entre GitHub y estas plataformas.
+  
+- Integración con servicios de notificación, como Slack o Microsoft Teams, para recibir alertas y notificaciones sobre eventos importantes en tus repositorios de GitHub.
+
+- Integración con servicios de integración continua y entrega continua (CI/CD), como Travis CI o CircleCI, para automatizar pruebas y despliegues cada vez que se realizan cambios en tu repositorio.
+
+Con estos ejemplos de integraciones con servicios externos y el potencial de la API de GitHub, puedes personalizar y ampliar tu flujo de trabajo de desarrollo para adaptarlo a tus necesidades específicas.

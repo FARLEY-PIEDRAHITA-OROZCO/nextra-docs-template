@@ -1,0 +1,45 @@
+### Módulo 14: Análisis y Visualización de Datos con GitHub
+
+En este módulo, exploraremos cómo utilizar GitHub para almacenar, colaborar en y compartir análisis de datos, así como visualizaciones de los mismos. Esto incluye el almacenamiento y gestión de conjuntos de datos, el uso de Jupyter Notebooks en GitHub, la visualización de datos con herramientas como Plotly y Matplotlib, y la colaboración en proyectos de análisis de datos.
+
+#### 14.1 Almacenamiento y gestión de conjuntos de datos
+
+GitHub proporciona un espacio de almacenamiento conveniente para conjuntos de datos, lo que facilita su gestión y colaboración. Aquí hay un ejemplo de cómo almacenar y gestionar conjuntos de datos en GitHub:
+
+- Crea un repositorio específico para tus conjuntos de datos, donde puedas organizarlos en carpetas según su tema o fuente.
+  
+- Utiliza archivos README.md para proporcionar información sobre los conjuntos de datos, incluyendo su origen, formato y cualquier otra información relevante.
+
+#### 14.2 Uso de Jupyter Notebooks en GitHub
+
+Los Jupyter Notebooks son una herramienta popular para realizar análisis de datos de manera interactiva y colaborativa. GitHub permite visualizar Jupyter Notebooks directamente en el navegador, lo que facilita su uso y colaboración. Aquí hay un ejemplo de cómo utilizar Jupyter Notebooks en GitHub:
+
+- Crea un nuevo archivo de Jupyter Notebook en tu repositorio de GitHub y comienza a escribir y ejecutar código para realizar análisis de datos.
+  
+- Utiliza Markdown para agregar texto explicativo, gráficos y otros elementos visuales a tu Notebook para hacer tu análisis más comprensible.
+
+#### 14.3 Visualización de datos con herramientas como Plotly, Matplotlib, etc.
+
+GitHub es compatible con diversas herramientas de visualización de datos, como Plotly, Matplotlib, Seaborn, entre otras. Puedes utilizar estas herramientas para crear visualizaciones atractivas y significativas de tus datos directamente desde tu repositorio de GitHub. Aquí hay un ejemplo de cómo utilizar Plotly para crear un gráfico interactivo en un Jupyter Notebook:
+
+```python
+import plotly.express as px
+import pandas as pd
+
+# Cargar datos
+df = pd.read_csv('datos.csv')
+
+# Crear gráfico interactivo
+fig = px.scatter(df, x='columna_x', y='columna_y', color='categoria', title='Gráfico de dispersión')
+fig.show()
+```
+
+#### 14.4 Colaboración en proyectos de análisis de datos
+
+GitHub facilita la colaboración en proyectos de análisis de datos al permitir que varios colaboradores contribuyan y revisen los cambios en el código y la documentación. Aquí hay un ejemplo de cómo colaborar en un proyecto de análisis de datos:
+
+- Los colaboradores pueden crear ramas y solicitudes de extracción para proponer cambios en el código de análisis de datos.
+  
+- Otros colaboradores pueden revisar las solicitudes de extracción, proporcionar comentarios y sugerir mejoras antes de que se fusionen los cambios.
+
+Con estas prácticas de análisis y visualización de datos y ejemplos integrados, podrás utilizar GitHub de manera efectiva para colaborar en proyectos de análisis de datos y compartir tus descubrimientos con otros.

@@ -1,0 +1,91 @@
+### Módulo 2: Fundamentos de Git
+
+En este módulo, exploraremos los fundamentos esenciales de Git, un sistema de control de versiones ampliamente utilizado para el desarrollo de software.
+
+#### 2.1 Conceptos básicos de control de versiones
+El control de versiones es fundamental para rastrear cambios en archivos y colaborar de manera efectiva en proyectos de desarrollo de software. Algunos conceptos básicos incluyen:
+
+- **Repositorio**: El lugar donde se almacenan los archivos y las diferentes versiones de los mismos.
+- **Commit**: Una instantánea de los archivos en un momento dado, guardada en el historial del repositorio.
+- **Branch**: Una línea de desarrollo independiente que se crea a partir del estado actual del repositorio.
+- **Merge**: La acción de combinar cambios de una rama en otra.
+- **Checkout**: Cambiar entre diferentes ramas o versiones de archivos.
+
+#### Ejemplo de código:
+
+```bash
+# Ejemplo de instalación de Git en Linux (usando apt)
+sudo apt update
+sudo apt install git
+
+# Configuración inicial de Git
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu@email.com"
+```
+
+#### 2.2 Instalación y configuración de Git
+Para comenzar a utilizar Git, es necesario instalarlo en tu sistema local y configurarlo correctamente. A continuación, se muestra un ejemplo de cómo hacerlo en un entorno Linux:
+
+```bash
+# Instalación de Git en Linux (usando apt)
+sudo apt update
+sudo apt install git
+
+# Configuración inicial de Git
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu@email.com"
+```
+
+#### Ejemplo de código:
+
+```bash
+# Inicialización de un repositorio local
+git init
+
+# Clonación de un repositorio remoto
+git clone https://github.com/usuario/mi-proyecto.git
+```
+
+#### 2.3 Creación de un repositorio local
+Un repositorio local es una copia del repositorio remoto en tu máquina. Puedes inicializar un nuevo repositorio Git en un directorio existente o clonar un repositorio remoto. Aquí tienes cómo hacerlo:
+
+```bash
+# Inicialización de un repositorio local
+git init
+
+# Clonación de un repositorio remoto
+git clone https://github.com/usuario/mi-proyecto.git
+```
+
+#### 2.4 Inicialización de un repositorio Git
+Una vez que se ha creado un repositorio local, es necesario inicializarlo correctamente, lo que implica:
+
+- **Configuración de archivos**: Definición de qué archivos y directorios se incluirán en el control de versiones utilizando el archivo `.gitignore`.
+- **Agregado de archivos**: Marcar archivos específicos para ser rastreados por Git mediante el comando `git add`.
+- **Confirmación de cambios**: Guardar los cambios en el repositorio local con un mensaje descriptivo utilizando el comando `git commit`.
+
+#### Ejemplo de código:
+
+```bash
+# Creación de un archivo .gitignore
+echo "node_modules/" >> .gitignore
+echo ".DS_Store" >> .gitignore
+
+# Agregar archivos al área de preparación
+git add .
+
+# Confirmar cambios
+git commit -m "Inicialización del repositorio y configuración de .gitignore"
+```
+
+#### 2.5 Comandos esenciales de Git: commit, push, pull, merge, branch, checkout
+Existen varios comandos esenciales en Git que permiten realizar acciones fundamentales en el control de versiones, como:
+
+- **Commit**: Guardar los cambios realizados en el repositorio local.
+- **Push**: Enviar los commits locales al repositorio remoto.
+- **Pull**: Obtener los cambios del repositorio remoto y fusionarlos con el repositorio local.
+- **Merge**: Combinar cambios de una rama con otra.
+- **Branch**: Crear, listar y eliminar ramas.
+- **Checkout**: Cambiar entre ramas o versiones de archivos.
+
+Estos comandos son fundamentales para trabajar de manera efectiva con Git y gestionar el flujo de trabajo de desarrollo de software de manera colaborativa.

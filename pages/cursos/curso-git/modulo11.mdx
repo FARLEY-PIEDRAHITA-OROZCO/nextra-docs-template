@@ -1,0 +1,55 @@
+### Módulo 11: Seguridad y Buenas Prácticas
+
+En este módulo, abordaremos aspectos cruciales de seguridad y buenas prácticas en el uso de Git para garantizar la integridad y protección de los repositorios y datos sensibles.
+
+#### 11.1. Autenticación y Autorización
+
+- **Configuración de SSH**: Explicaremos cómo configurar y utilizar claves SSH para autenticación segura en Git, minimizando el riesgo de accesos no autorizados.
+
+    **Ejemplo**:
+    ```
+    ssh-keygen -t rsa -b 4096 -C "tu_email@example.com"
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_rsa
+    ```
+
+- **Autenticación de Dos Factores (2FA)**: Discutiremos la importancia de habilitar la autenticación de dos factores en plataformas de hospedaje de código como GitHub, GitLab y Bitbucket, y cómo configurarla.
+
+    **Ejemplo**: Configuración de la autenticación de dos factores en GitHub.
+
+#### 11.2. Buenas Prácticas de Seguridad
+
+- **Uso de .gitignore**: Profundizaremos en la importancia de utilizar el archivo .gitignore para evitar incluir archivos y datos sensibles en el repositorio, como contraseñas, claves de API y archivos de configuración.
+
+    **Ejemplo**:
+    ```
+    # Archivos de configuración sensibles
+    config.ini
+    secret_key.txt
+    ```
+
+- **No Almacenar Contraseñas en Repositorios**: Resaltaremos la importancia de no almacenar contraseñas u otra información sensible en repositorios Git y proporcionaremos alternativas seguras para gestionar dicha información.
+
+    **Ejemplo**: Uso de variables de entorno para almacenar y acceder a información sensible.
+
+#### 11.3. Prevención de Ataques y Vulnerabilidades
+
+- **Evaluación de Vulnerabilidades**: Explicaremos cómo realizar evaluaciones periódicas de vulnerabilidades en los repositorios Git y cómo abordar y corregir posibles problemas de seguridad.
+
+    **Ejemplo**: Utilización de herramientas como OWASP Dependency-Check para analizar dependencias en busca de vulnerabilidades conocidas.
+
+- **Prácticas de Codificación Segura**: Presentaremos técnicas y prácticas de codificación segura para minimizar la exposición a ataques de seguridad, como la validación de datos de entrada y el uso de bibliotecas y frameworks seguros.
+
+    **Ejemplo**: Implementación de la validación de entrada en formularios web para prevenir ataques de inyección de SQL.
+
+#### 11.4. Educación y Concientización
+
+- **Capacitación del Equipo**: Subrayaremos la importancia de la capacitación continua del equipo en prácticas de seguridad y concientización sobre posibles amenazas y riesgos en el uso de Git.
+
+    **Ejemplo**: Realización de sesiones de capacitación sobre buenas prácticas de seguridad en Git y manejo de datos sensibles.
+
+- **Políticas de Seguridad**: Presentaremos la implementación de políticas de seguridad claras y medidas de cumplimiento para garantizar un entorno de desarrollo seguro y protegido.
+
+    **Ejemplo**: Documentación de políticas de seguridad y requerimientos de cumplimiento para el equipo de desarrollo.
+
+Este módulo proporcionará una comprensión detallada de las medidas de seguridad y las buenas prácticas que deben seguirse para proteger los repositorios Git y los datos sensibles, garantizando un entorno de desarrollo seguro y confiable.

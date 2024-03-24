@@ -1,0 +1,71 @@
+### Módulo 11: Personalización y Automatización Avanzada
+
+En este módulo, exploraremos cómo personalizar y automatizar flujos de trabajo en GitHub utilizando diversas herramientas y características avanzadas, lo que incluye la creación de plantillas, el uso de GitHub Actions para tareas automatizadas personalizadas, la configuración de reglas y flujos de trabajo automatizados, y el despliegue automático con GitHub Actions.
+
+#### 11.1 Creación de plantillas para issues y pull requests
+GitHub te permite crear plantillas personalizadas para issues y pull requests, lo que ayuda a estandarizar el proceso de creación y facilita la captura de información relevante. Aquí hay un ejemplo de cómo crear una plantilla para issues:
+
+1. En la carpeta `.github` de tu repositorio, crea un nuevo archivo llamado `issue_template.md`.
+2. Define el formato y la estructura de tu plantilla, incluyendo secciones para descripción, pasos para reproducir, y cualquier información adicional relevante.
+3. Guarda el archivo y comienza a crear nuevos issues, donde podrás seleccionar tu plantilla personalizada.
+
+#### 11.2 Uso de GitHub Actions para tareas automatizadas personalizadas
+GitHub Actions te permite automatizar flujos de trabajo personalizados directamente desde tu repositorio de GitHub. Puedes utilizar Actions para realizar tareas como ejecutar pruebas, construir y desplegar tu aplicación, o notificar a tu equipo sobre eventos específicos. Aquí hay un ejemplo de un archivo de flujo de trabajo de GitHub Actions para ejecutar pruebas en cada push:
+
+```yaml
+name: Run Tests
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test
+```
+
+#### 11.3 Configuración de reglas y flujos de trabajo automatizados
+Además de Actions, GitHub también te permite configurar reglas y flujos de trabajo automatizados utilizando otras herramientas integradas, como GitHub Apps o Webhooks. Puedes utilizar estas herramientas para realizar acciones específicas en respuesta a eventos en tu repositorio, como la asignación automática de tareas o la ejecución de acciones específicas cuando se cierra un issue. Por ejemplo, puedes configurar una GitHub App para etiquetar automáticamente los issues basándose en su contenido o título.
+
+#### 11.4 Despliegue automático con GitHub Actions
+Uno de los casos de uso más comunes para GitHub Actions es el despliegue automático de aplicaciones. Puedes configurar flujos de trabajo de Actions para construir y desplegar automáticamente tu aplicación en servicios de alojamiento como AWS, Azure, Netlify o Heroku. Aquí hay un ejemplo de un flujo de trabajo de Actions para desplegar una aplicación en Netlify:
+
+```yaml
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build project
+      run: npm run build
+
+    - name: Deploy to Netlify
+      uses: netlify/actions/cli@v1
+      with:
+        args: deploy --prod
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+```
+
+Con estas herramientas y ejemplos, podrás personalizar y automatizar eficazmente tus flujos de trabajo en GitHub, lo que te permitirá ser más productivo y eficiente en el desarrollo de software.

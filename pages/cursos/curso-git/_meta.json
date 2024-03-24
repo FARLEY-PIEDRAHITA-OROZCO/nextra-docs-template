@@ -1,0 +1,18 @@
+{
+    "temario": "Temario",
+    "modulo1": "Módulo 1: Introducción a Git",
+    "modulo2": "Módulo 2: Instalación y Configuración",
+    "modulo3": "Módulo 3: Uso básico de Git",
+    "modulo4": "Módulo 4: Trabajo con Ramas (Branches)",
+    "modulo5": "Módulo 5: Trabajo Remoto con Git",
+    "modulo6": "Módulo 6: Colaboración con Git",
+    "modulo7": "Módulo 7: Gestión Avanzada de Ramas y Resolución de Conflictos en Git",
+    "modulo8": "Módulo 8: Rebase y Otras Herramientas Avanzadas en Git",
+    "modulo9": "Módulo 9: Gestión de Versiones Semánticas y Etiquetado en Git",
+    "modulo10": "Módulo 10: Git Hooks y Automatización de Tareas",
+    "modulo11": "Módulo 11: Seguridad y Buenas Prácticas",
+    "modulo12": "Módulo 12: Casos de Uso Específicos",
+    "modulo13": "Módulo 13: Mantenimiento y Optimización de Repositorios Git",
+    "modulo14": "Solución de Problemas Avanzados en Git",
+    "modulo15": "Módulo 15: Recursos Adicionales y Conclusiones"
+}
