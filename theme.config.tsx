@@ -7,7 +7,7 @@ const config: DocsThemeConfig = {
     link: 'https://github.com/FARLEY-PIEDRAHITA-OROZCO',
   },
   chat: {
-    link: 'https://discord.com',
+    link: 'https://discord.gg/Svwtey4E',
   },
   docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
