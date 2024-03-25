@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/shuding/nextra-docs-template.git"
   },
-  "author": "Farley Piedrahita Orozco <g@shud.in>",
+  "author": "Farley Piedrahita Orozco",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/shuding/nextra-docs-template/issues"
