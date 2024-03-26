@@ -4,18 +4,64 @@
 
 Antes de comenzar a trabajar con Git, necesitas instalarlo en tu sistema. Git es compatible con una variedad de sistemas operativos, incluyendo Windows, macOS y Linux.
 
-- **Instalación en Windows**:
-  - Descarga el instalador de Git desde el sitio web oficial.
-  - Ejecuta el archivo descargado y sigue las instrucciones del instalador.
-  - Después de la instalación, verifica que Git se haya instalado correctamente abriendo una terminal y ejecutando el comando `git --version`.
+#### Instalación de Git en Windows
 
-- **Instalación en macOS**:
-  - Git generalmente viene preinstalado en macOS. Puedes verificar su instalación ejecutando `git --version` en la terminal.
-  - Si prefieres instalar Git a través de Homebrew, puedes hacerlo ejecutando `brew install git` en la terminal.
+1. **Descargar el instalador de Git**:
+   - Ve al sitio web oficial de Git para Windows: [Git for Windows](https://gitforwindows.org/).
+   - Haz clic en el botón de descarga para obtener el instalador.
 
-- **Instalación en Linux**:
-  - Usa el administrador de paquetes de tu distribución para instalar Git. Por ejemplo, en Ubuntu puedes ejecutar `sudo apt-get install git`.
-  - Una vez instalado, verifica la instalación con `git --version`.
+   ![Descarga de Git para Windows](/img/img1.png)
+
+2. **Ejecutar el instalador**:
+   - Una vez descargado, navega hasta la ubicación donde se guardó el archivo descargado (por lo general, la carpeta "Descargas").
+   - Haz doble clic en el archivo .exe descargado para iniciar el proceso de instalación.
+
+   ![Instalador de Git para Windows](/img/img2.png)
+
+3. **Configuración de opciones**:
+   - Durante la instalación, se te presentarán diversas opciones. Por lo general, las opciones predeterminadas son adecuadas para la mayoría de los usuarios. Puedes seguir adelante haciendo clic en "Next" en cada paso.
+   - Si deseas personalizar alguna opción, como la ubicación de instalación o las opciones del menú contextual, puedes hacerlo según tus preferencias.
+
+4. **Finalizar la instalación**:
+   - Una vez completada la instalación, haz clic en "Finish" para cerrar el instalador.
+
+   ![Finalización de la instalación de Git para Windows](/img/img3.png)
+
+5. **Verificar la instalación**:
+   - Abre el símbolo del sistema (cmd) o PowerShell.
+   - Escribe el siguiente comando y presiona Enter: `git --version`.
+   - Deberías ver la versión de Git instalada si todo se ha configurado correctamente.
+
+   ![Verificación de la instalación de Git en Windows](/img/img4.png)
+
+
+#### Instalación de Git en macOS
+
+1. **Instalación con Homebrew** (recomendado):
+   - Abre la Terminal.
+   - Ejecuta el siguiente comando para instalar Homebrew si aún no lo tienes: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`.
+   - Después de instalar Homebrew, ejecuta el siguiente comando para instalar Git: `brew install git`.
+
+2. **Instalación desde el paquete de instalación de Git**:
+   - Ve al sitio web oficial de Git para macOS: [Git para macOS](https://git-scm.com/download/mac).
+   - Descarga el paquete de instalación para macOS.
+   - Haz doble clic en el paquete descargado y sigue las instrucciones en pantalla para completar la instalación.
+
+3. **Verificar la instalación**:
+   - Abre la Terminal.
+   - Escribe `git --version` y presiona Enter. Deberías ver la versión de Git instalada si todo se ha configurado correctamente.
+
+
+#### Instalación de Git en Linux (Ubuntu/Debian)
+
+1. **Instalación a través de apt**:
+   - Abre la Terminal.
+   - Ejecuta el siguiente comando para actualizar el índice de paquetes: `sudo apt update`.
+   - Luego, instala Git escribiendo: `sudo apt install git`.
+
+2. **Verificar la instalación**:
+   - Después de la instalación, escribe `git --version` en la Terminal y presiona Enter. Deberías ver la versión de Git instalada si todo se ha configurado correctamente.
+
 
 #### 2.2. Configuración inicial de Git
 
